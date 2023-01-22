@@ -1,16 +1,19 @@
 <template>
-  <div class="base-spinner fa-3x">
+  <div class="base-spinner fa-3x" v-if="visible">
     <i class="fas fa-circle-notch fa-spin"></i>
   </div>
 </template>
 <script>
 export default {
-
+  props: {
+    visible: {
+      type: Boolean
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>
-@import '../../assets/scss/variables';
-.base-spinner{
+.base-spinner {
   top: 0;
   bottom: 0;
   right: 0;
@@ -21,8 +24,8 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $dark-medium;
-  color: $featured;
+  background-color: var(--dark-medium);
+  color: var(--featured);
   z-index: 10000000;
 }
 </style>
