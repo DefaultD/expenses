@@ -41,10 +41,8 @@ export default {
   components: {
     BaseSpinner,
     LayoutNavigation
-  },
-
-  methods: {
   }
+
 }
 </script>
 
